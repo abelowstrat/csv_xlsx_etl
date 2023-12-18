@@ -1,0 +1,310 @@
+[
+    {
+        "file_name": "Monatswerte SBdV für alle VTW",
+        "input_file_path": "C:/dbi_projekte/DBI_PYTLE_CLEANER/Data/Input/Monatswerte SBdV für alle VTW.xlsx",
+        "sheet_name": "SBdV Gesamt",
+        "output_dir": "Data/Output",
+        "output_file_name": "f_sbdv_gesamt.csv",
+        "transformations": [
+            {
+                "type": "rename",
+                "details": {
+                    "MM": "MM",
+                    "SBdV-Art": "SBdV_Art",
+                    "KtoNr": "KtoNr",
+                    "VTD": "VTD",
+                    "GD": "GD",
+                    "GBBD": "GBBD",
+                    "SBdV&VTD": "SBdV_VTD",
+                    "GB (3-6)": "GB__3_6_",
+                    "BD (7-8)": "BD__7_8_",
+                    "GJ": "GJ",
+                    "VJ": "VJ",
+                    "SBdV Art": "SBdV_Art_txt",
+                    "Belegdatum": "Belegdatum",
+                    "Belegart": "Belegart",
+                    "Text": "Text",
+                    "Datenherkunft": "Datenherkunft",
+                    "1. OrgaNr": "OrgaNr1",
+                    "2. OrgaNr": "OrgaNr2",
+                    "3. OrgaNr": "OrgaNr3",
+                    "4. OrgaNr": "OrgaNr4",
+                    "5. OrgaNr": "OrgaNr5",
+                    "6. OrgaNr": "OrgaNr6",
+                    "7. OrgaNr": "OrgaNr7",
+                    "8. OrgaNr": "OrgaNr8",
+                    "9. OrgaNr": "OrgaNr9",
+                    "10. OrgaNr": "OrgaNr10",
+                    "11. OrgaNr": "OrgaNr11",
+                    "12. OrgaNr": "OrgaNr12",
+                    "13. OrgaNr": "OrgaNr13",
+                    "14. OrgaNr": "OrgaNr14",
+                    "15. OrgaNr": "OrgaNr15"
+                }
+            },
+            {
+                "type": "clean_numeric",
+                "columns": [
+                    "GJ",
+                    "VJ"
+                ]
+            },
+            {
+                "type": "transform_date",
+                "date_columns": [
+                    {
+                        "column": "Belegdatum",
+                        "input_format": "%Y-%m-%d %H:%M:%S",
+                        "output_format": "%Y-%m-%d"
+                    }
+                ]
+            }
+        ],
+        "output_column_order": [
+            "MM",
+            "SBdV_Art",
+            "KtoNr",
+            "VTD",
+            "GD",
+            "GBBD",
+            "SBdV_VTD",
+            "GB__3_6_",
+            "BD__7_8_",
+            "GJ",
+            "VJ",
+            "SBdV_Art_txt",
+            "Belegdatum",
+            "Belegart",
+            "Text",
+            "Datenherkunft",
+            "OrgaNr1",
+            "OrgaNr2",
+            "OrgaNr3",
+            "OrgaNr4",
+            "OrgaNr5",
+            "OrgaNr6",
+            "OrgaNr7",
+            "OrgaNr8",
+            "OrgaNr9",
+            "OrgaNr10",
+            "OrgaNr11",
+            "OrgaNr12",
+            "OrgaNr13",
+            "OrgaNr14",
+            "OrgaNr15"
+        ]
+    },
+    {
+        "file_name": "MVT - Vertriebspartner_Potential (02.11.2023)_PowerBI",
+        "input_file_path": "C:/dbi_projekte/DBI_PYTLE_CLEANER/Data/Input/MVT - Vertriebspartner_Potential (02.11.2023)_PowerBI.xlsx",
+        "sheet_name": "export (22)",
+        "output_dir": "Data/Output",
+        "output_file_name": "d_makler_kategorisierung.csv",
+        "transformations": [
+            {
+                "type": "rename",
+                "details": {
+                    "ID": "ID",
+                    "Name": "Name",
+                    "MSB Nummer": "MSB_Nummer",
+                    "Pot Commercial": "Pot_Commercial",
+                    "Pot Retail": "Pot_Retail",
+                    "Pot LV": "Pot_LV",
+                    "Pot KV": "Pot_KV",
+                    "Kat Gesamt": "Kat_Gesamt",
+                    "Kat Corporate": "Kat_Corporate",
+                    "Kat Retail": "Kat_Retail",
+                    "Kat LV": "Kat_LV",
+                    "Kat KV": "Kat_KV",
+                    "Regionenbetreuung P": "Zuordnung RM_RB_Pool",
+                    "RB-Name": "RB_Name"
+                }
+            }
+        ],
+        "new_columns": [
+            "ID"
+        ],
+        "output_column_order": [
+            "ID",
+            "Name",
+            "MSB_Nummer",
+            "Pot_Commercial",
+            "Pot_Retail",
+            "Pot_LV",
+            "Pot_KV",
+            "Kat_Gesamt",
+            "Kat_Corporate",
+            "Kat_Retail",
+            "Kat_LV",
+            "Kat_KV",
+            "Zuordnung RM_RB_Pool",
+            "RB_Name"
+        ]
+    },
+    {
+        "file_name": "20230829_MAHN_GESAMT",
+        "input_file_path": "C:/dbi_projekte/DBI_PYTLE_CLEANER/Data/Input/20230829_MAHN_GESAMT.xlsx",
+        "sheet_name": "qryGESAMT",
+        "output_dir": "Data/Output",
+        "output_file_name": "mahnliste.csv",
+        "transformations": [
+            {
+                "type": "rename",
+                "details": {
+                    "Aktenstandort": "AKTENSTANDORT"
+                }
+            },
+            {
+                "type": "transform_date",
+                "date_columns": [
+                    {
+                        "column": "VABL",
+                        "input_format": "%Y-%m-%d %H:%M:%S",
+                        "output_format": "%Y-%m-%d"
+                    },
+                    {
+                        "column": "VBEG",
+                        "input_format": "%Y-%m-%d %H:%M:%S",
+                        "output_format": "%Y-%m-%d"
+                    },
+                    {
+                        "column": "MAHNBEGINN",
+                        "input_format": "%Y-%m-%d %H:%M:%S",
+                        "output_format": "%Y-%m-%d"
+                    }
+                ]
+            },
+            {
+                "type": "clean_numeric",
+                "columns": [
+                    "MAHNBETRAG",
+                    "SALDO"
+                ]
+            }
+        ],
+        "output_column_order": [
+            "ORGANR",
+            "VSNR",
+            "GES",
+            "VERSNEHMER",
+            "VBEG",
+            "VABL",
+            "VERSPERSON",
+            "KTO_NR",
+            "BLZ",
+            "LEVSTOPBEG",
+            "LEVGRUND",
+            "MAHNBEGINN",
+            "MAHNSTUFE",
+            "MAHNTEXT",
+            "MAHNBETRAG",
+            "SALDO",
+            "AKTENSTANDORT"
+        ]
+    },
+    {
+        "file_name": "GSL-2023-10-26",
+        "input_file_path": "C:/dbi_projekte/DBI_PYTLE_CLEANER/Data/Input/GSL-2023-10-26.csv",
+        "output_dir": "Data/Output",
+        "output_file_name": "f_gesamt_grossschadenliste.csv",
+        "transformations": [
+            {
+                "type": "rename",
+                "details": {
+                    "#BEREICH": "BEREICH"
+                }
+            },
+            {
+                "type": "clean_numeric",
+                "columns": [
+                    "CVZAHLUNGEN",
+                    "CVRESTRES",
+                    "CVSCAUFW"
+                ]
+            },
+            {
+                "type": "transform_date",
+                "date_columns": [
+                    {
+                        "column": "SEINDAT",
+                        "input_format": "%d.%m.%Y",
+                        "output_format": "%Y-%m-%d"
+                    },
+                    {
+                        "column": "MELDEDAT",
+                        "input_format": "%d.%m.%Y",
+                        "output_format": "%Y-%m-%d"
+                    },
+                    {
+                        "column": "STICHTAG",
+                        "input_format": "%d.%m.%Y",
+                        "output_format": "%Y-%m-%d"
+                    }
+                ]
+            }
+        ],
+        "output_column_order": [
+            "BEREICH",
+            "NL",
+            "ADB",
+            "GESELLNR",
+            "VD",
+            "SPGRU",
+            "SPGRUKBEZ",
+            "SPS",
+            "SPSKBEZ",
+            "BD",
+            "BESTORGANR",
+            "NAME",
+            "VTD",
+            "VTWEGBEZ",
+            "SNR",
+            "SEINDAT",
+            "MELDEDAT",
+            "SCURSACHE",
+            "VSNR",
+            "PTNAME",
+            "AFB",
+            "MVQUOTE",
+            "CVZAHLUNGEN",
+            "CVRESTRES",
+            "CVSCAUFW",
+            "STICHTAG",
+            "GWSCHDURS",
+            "GWSCHDURSDET"
+        ]
+    },
+    {
+        "file_name": "BO_GESAMT_07.2023",
+        "input_file_path": "C:/dbi_projekte/DBI_PYTLE_CLEANER/Data/Input/BO_GESAMT_07.2023.xlsx",
+        "sheet_name": "BO_GESAMT",
+        "output_dir": "Data/Output",
+        "output_file_name": "dr_liste.csv",
+        "transformations": [
+            {
+                "type": "melt",
+                "id_vars": [
+                    "ORGANR"
+                ],
+                "value_vars": [
+                    "SumLV_Diskontrisiko",
+                    "SumKV_DISKONTRISIKO",
+                    "SumStornoreserve",
+                    "SumVerdienst",
+                    "SumVorschuß"
+                ]
+            }
+        ],
+        "new_columns": [
+            "Jahr",
+            "Monat"
+        ],
+        "output_column_order": [
+            "ORGANR",
+            "Attribut",
+            "Wert",
+            "Jahr",
+            "Monat"
+        ]
+    }
+]
