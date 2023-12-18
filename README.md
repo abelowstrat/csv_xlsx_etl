@@ -1,19 +1,23 @@
 ## Setting Up the Project
 ### Prerequesites
-- Install and Open Miniconda / Anaconda Prompt. (Available on Silva)
-
-- Optional: Install Git for Windows to easily pull the most recent version of the program.
+- Install and Open Miniconda / Anaconda Prompt.
 
 ### **Install dependencies**
+Install the project dependencies using conda:
 
-   If you configured your .condarc with your api token correctly and have been added to an openpaas subscription, you can install the project dependencies using conda:
+```sh
+conda install pandas
+```
+```sh
+conda install openpyxl
+```
 
-   ```sh
-   conda install pandas
-   ```
-   ```sh
-   conda install openpyxl
-   ```
+or simply 
+
+```sh
+pip install -r requirements.txt
+```
+
 Once these are set up, your batch scripts can be used to run the python program.
 
 ### **How to Run the Script**

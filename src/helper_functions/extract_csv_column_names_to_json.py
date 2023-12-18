@@ -37,7 +37,7 @@ def get_formatted_column_names(file_path, sheet_name=None):
     return json.dumps([formatted_columns, formatted_columns2] , indent=4)
 
 def main():
-    file_path = r"C:\Projekte\DBI_PYTLE_CLEANER\source_files\Transferordner zu David - upload easy\DR-Liste\Quelldatei\BO_GESAMT_07.2023.xlsx"
+    file_path = r"Data\Input\FactInternetSales.csv"
     sheet_name = "BO_GESAMT"
     formatted_columns = get_formatted_column_names(file_path, sheet_name)
 
