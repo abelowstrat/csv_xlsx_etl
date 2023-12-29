@@ -1,0 +1,85 @@
+[
+    {
+        "file_name": "FactInternetSales",
+        "input_file_path": "Data/Input/FactInternetSales.csv",
+        "output_dir": "Data/Output",
+        "output_file_name": "fact_sales_clean.csv",
+        "transformations": [
+            {
+                "type": "rename",
+                    "details": {
+                    "ProductKey": "ProductKey",
+                    "OrderDateKey": "OrderDateKey",
+                    "DueDateKey": "DueDateKey",
+                    "ShipDateKey": "ShipDateKey",
+                    "CustomerKey": "CustomerKey",
+                    "PromotionKey": "PromotionKey",
+                    "CurrencyKey": "CurrencyKey",
+                    "SalesTerritoryKey": "SalesTerritoryKey",
+                    "SalesOrderNumber": "SalesOrderNumber",
+                    "SalesOrderLineNumber": "SalesOrderLineNumber",
+                    "RevisionNumber": "RevisionNumber",
+                    "OrderQuantity": "OrderQuantity",
+                    "UnitPrice": "UnitPrice",
+                    "ExtendedAmount": "ExtendedAmount",
+                    "UnitPriceDiscountPct": "UnitPriceDiscountPct",
+                    "DiscountAmount": "DiscountAmount",
+                    "ProductStandardCost": "ProductStandardCost",
+                    "TotalProductCost": "TotalProductCost",
+                    "SalesAmount": "SalesAmount",
+                    "TaxAmt": "TaxAmt",
+                    "Freight": "Freight",
+                    "CarrierTrackingNumber": "CarrierTrackingNumber",
+                    "CustomerPONumber": "CustomerPONumber",
+                    "OrderDate": "OrderDate",
+                    "DueDate": "DueDate",
+                    "ShipDate": "ShipDate"
+                    }
+            },
+            {
+                "type": "clean_numeric",
+                "columns": [
+                    "UnitPrice"
+                ]
+            },
+            {
+                "type": "transform_date",
+                "date_columns": [
+                    {
+                        "column": "ShipDate",
+                        "input_format": "%Y-%m-%d %H:%M:%S",
+                        "output_format": "%Y-%m-%d"
+                    }
+                ]
+            }
+        ],
+        "output_column_order": [
+                	"ProductKey",
+                    "OrderDateKey",
+                    "DueDateKey",
+                    "ShipDateKey",
+                    "CustomerKey",
+                    "PromotionKey",
+                    "CurrencyKey",
+                    "SalesTerritoryKey",
+                    "SalesOrderNumber",
+                    "SalesOrderLineNumber",
+                    "RevisionNumber",
+                    "OrderQuantity",
+                    "UnitPrice",
+                    "ExtendedAmount",
+                    "UnitPriceDiscountPct",
+                    "DiscountAmount",
+                    "ProductStandardCost",
+                    "TotalProductCost",
+                    "SalesAmount",
+                    "TaxAmt",
+                    "Freight",
+                    "CarrierTrackingNumber",
+                    "CustomerPONumber",
+                    "OrderDate",
+                    "DueDate",
+                    "ShipDate"
+        ]
+    }
+]
